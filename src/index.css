@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Warm Neutral Palette */
+  --color-bg-main: #F8F5F2;
+  --color-bg-surface: #FFFFFF;
+  --color-stardew-primary: #F97316;
+  --color-stardew-secondary: #374151;
+  --color-stardew-accent: #FDBA74;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+  --color-border-light: #E5E7EB;
+  --color-bg-muted: #F3F4F6;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-primary font-sans antialiased selection:bg-stardew-primary/20;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-bg-surface border border-border-light rounded-xl transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.05)];
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-[0_8px_24px_rgba(0,0,0,0.04)] hover:border-stardew-accent/30;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-stardew-primary hover:bg-stardew-primary/90 text-white font-medium rounded-lg transition-all active:scale-[0.98] disabled:opacity-50 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-bg-surface hover:bg-bg-muted text-text-primary border border-border-light font-medium rounded-lg transition-all active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 hover:bg-bg-muted text-text-secondary hover:text-text-primary rounded-lg transition-all;
+  }
+
+  .input-premium {
+    @apply w-full bg-bg-surface border border-border-light rounded-lg px-4 py-2.5 text-sm focus:border-stardew-primary focus:ring-1 focus:ring-stardew-primary outline-none transition-all placeholder:text-text-secondary/50;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-text-secondary/10 rounded-full hover:bg-text-secondary/20;
+}
+
