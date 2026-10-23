@@ -1,5 +1,5 @@
 {
   "name": "Junimint",
-  "description": "Advanced dashboard and save file editor for Stardew Valley. Manage player stats, inventory, farm data, and world state with a modern SaaS-style interface.",
+  "description": "A modern Stardew Valley save editor featuring inventory management, player stats, relationships, farm data, analytics, and save validation.",
   "requestFramePermissions": []
 }
