@@ -1,0 +1,2 @@
+# junimint
+A modern Stardew Valley save editor featuring inventory management, player stats, relationships, farm data, analytics, and save validation.
