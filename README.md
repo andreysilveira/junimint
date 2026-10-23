@@ -53,7 +53,7 @@ Manage your farm, customize your character, explore relationships, and edit supp
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/andreysilveira/junimint.git
 cd junimint
 ```
 
